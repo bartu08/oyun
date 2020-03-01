@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Görevler Ana</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="text-align:center;">
+        <br>
+        <h1> Görevler 2</h1>
+        <br><br><br>
+        <!-- <p>Oyuncu adları ve görevleri yaz</p> -->
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                Oyuncu adlarını ve Görevleri gir.
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"><b>Oyuncu Sayısı</b></label>
+                    <select class="form-control" id="OyuncuSayisiid" onchange="oyuncusayisi(this.selectedIndex)">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                    </select>
+                </div>
+                <br>
+
+                <div class="input-group mb-3" id="oyuncu1">
+                    <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu1ad">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(1)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu2" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu2ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(2)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu3" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu3ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(3)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu4" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu4ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(4)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu5" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu5ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(5)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu6" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu6ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(6)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu7" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu7ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(7)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu8" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu8ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(8)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+                <div class="input-group mb-3" id="oyuncu9" style="display: none;">
+                  <input type="text" class="form-control" placeholder="Oyuncu adı" aria-label="Oyuncu adı" aria-describedby="button-addon2" id="oyuncu9ad">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="oyuncugir(9)" data-toggle="modal" data-target="#exampleModal">Görevleri gir</button>
+                  </div>
+                </div>
+
+
+
+                <!-- Modal1 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">5 Görev Gir</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <input type="text" style="width: 400px;" id="yazilmisgorev1"><br>
+                        <input type="text" style="width: 400px;" id="yazilmisgorev2"><br>
+                        <input type="text" style="width: 400px;" id="yazilmisgorev3"><br>
+                        <input type="text" style="width: 400px;" id="yazilmisgorev4"><br>
+                        <input type="text" style="width: 400px;" id="yazilmisgorev5">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kaydetmeden Kapat</button>
+                        <button type="button" class="btn btn-primary" onclick="gorevgir()" data-dismiss="modal">Kaydet</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1.kısımson -->
+              </div>
+
+
+              <div class="col-sm">
+                Herkes görevlerini girdiyse rastgele görev al!
+                <br><br><br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalGorevAc" onclick="rastgeleGorevCek()">5 Görev aç</button>
+
+                <!-- Modal2Gorevgizli -->
+                <div class="modal fade" id="exampleModalGorevAc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Gizli Görevlerin</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <span id="myText1"></span>
+                        <br>
+                        <span id="myText2"></span>
+                        <br>
+                        <span id="myText3"></span>
+                        <br>
+                        <span id="myText4"></span>
+                        <br>
+                        <span id="myText5"></span>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script>
+        var osay;
+
+        function oyuncusayisi(osayi){
+          osay=osayi+1;
+
+          var oy1dv = document.getElementById("oyuncu1");
+          var oy2dv = document.getElementById("oyuncu2");
+          var oy3dv = document.getElementById("oyuncu3");
+          var oy4dv = document.getElementById("oyuncu4");
+          var oy5dv = document.getElementById("oyuncu5");
+          var oy6dv = document.getElementById("oyuncu6");
+          var oy7dv = document.getElementById("oyuncu7");
+          var oy8dv = document.getElementById("oyuncu8");
+          var oy9dv = document.getElementById("oyuncu9");
+
+          switch (osayi) {
+            case 0:
+              oy2dv.style.display = "none";
+              oy3dv.style.display = "none";
+              oy4dv.style.display = "none";
+              oy5dv.style.display = "none";
+              oy6dv.style.display = "none";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 1:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "none";
+              oy4dv.style.display = "none";
+              oy5dv.style.display = "none";
+              oy6dv.style.display = "none";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 2:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "none";
+              oy5dv.style.display = "none";
+              oy6dv.style.display = "none";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 3:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "none";
+              oy6dv.style.display = "none";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 4:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "";
+              oy6dv.style.display = "none";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 5:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "";
+              oy6dv.style.display = "";
+              oy7dv.style.display = "none";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 6:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "";
+              oy6dv.style.display = "";
+              oy7dv.style.display = "";
+              oy8dv.style.display = "none";
+              oy9dv.style.display = "none";
+              break;
+            case 7:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "";
+              oy6dv.style.display = "";
+              oy7dv.style.display = "";
+              oy8dv.style.display = "";
+              oy9dv.style.display = "none";
+              break;
+            case 8:
+              oy2dv.style.display = "";
+              oy3dv.style.display = "";
+              oy4dv.style.display = "";
+              oy5dv.style.display = "";
+              oy6dv.style.display = "";
+              oy7dv.style.display = "";
+              oy8dv.style.display = "";
+              oy9dv.style.display = "";
+              break;
+          }
+        };
+
+        var secilioyuncu;
+        var secilioyuncuadi;
+        var gorevarray1;
+        var gorevarray2;
+        var gorevarray3;
+        var gorevarray4;
+        var gorevarray5;
+        var gorevarray6;
+        var gorevarray7;
+        var gorevarray8;
+        var gorevarray9;
+
+        function oyuncugir(hangioy){
+          secilioyuncu = hangioy;
+          secilioyuncuadi = document.getElementById("oyuncu" + (secilioyuncu) + "ad").value;
+
+          document.getElementById("yazilmisgorev1").value = "";
+          document.getElementById("yazilmisgorev2").value = "";
+          document.getElementById("yazilmisgorev3").value = "";
+          document.getElementById("yazilmisgorev4").value = "";
+          document.getElementById("yazilmisgorev5").value = "";
+
+        }
+
+        function gorevgir(){
+          var ygorev1 = document.getElementById("yazilmisgorev1").value + " // " + secilioyuncuadi;
+          var ygorev2 = document.getElementById("yazilmisgorev2").value + " // " + secilioyuncuadi;
+          var ygorev3 = document.getElementById("yazilmisgorev3").value + " // " + secilioyuncuadi;
+          var ygorev4 = document.getElementById("yazilmisgorev4").value + " // " + secilioyuncuadi;
+          var ygorev5 = document.getElementById("yazilmisgorev5").value + " // " + secilioyuncuadi;
+
+          switch (secilioyuncu) {
+            case 1:
+              gorevarray1 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 2:
+              gorevarray2 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 3:
+              gorevarray3 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 4:
+              gorevarray4 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 5:
+              gorevarray5 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 6:
+              gorevarray6 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 7:
+              gorevarray7 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 8:
+              gorevarray8 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+            case 9:
+              gorevarray9 = [ygorev1, ygorev2, ygorev3, ygorev4, ygorev5];
+              break;
+          }
+          
+        }
+
+        function rastgeleGorevCek(){
+          var butungorevlerarray;
+
+          switch (osay) {
+            case 1:
+              butungorevlerarray = gorevarray1;
+              break;
+            case 2:
+              butungorevlerarray = gorevarray1.concat(gorevarray2);
+              break;
+            case 3:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3);
+              break;
+            case 4:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4);
+              break;
+            case 5:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4, gorevarray5);
+              break;
+            case 6:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4, gorevarray5, gorevarray6);
+              break;
+            case 7:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4, gorevarray5, gorevarray6, gorevarray7);
+              break;
+            case 8:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4, gorevarray5, gorevarray6, gorevarray7, gorevarray8);
+              break;
+            case 9:
+              butungorevlerarray = gorevarray1.concat(gorevarray2, gorevarray3, gorevarray4, gorevarray5, gorevarray6, gorevarray7, gorevarray8, gorevarray9);
+              break;
+          }
+
+          console.log(butungorevlerarray);
+
+          var randomGorev1 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+          var randomGorev2 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+          var randomGorev3 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+          var randomGorev4 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+          var randomGorev5 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+          var randomGorev6 = butungorevlerarray[Math.floor(Math.random()*butungorevlerarray.length)];
+                      
+          document.getElementById("myText1").innerHTML = randomGorev1;
+          document.getElementById("myText2").innerHTML = randomGorev2;
+          document.getElementById("myText3").innerHTML = randomGorev3;
+          document.getElementById("myText4").innerHTML = randomGorev4;
+          document.getElementById("myText5").innerHTML = randomGorev5;
+        }
+    </script>
+</body>
+</html>

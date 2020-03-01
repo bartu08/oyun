@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Görevler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="text-align:center;">
+        <br>
+        <h1> Klasik Görevler </h1>
+        <br><br><br>
+        <p>Hazır görevlerden aç</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="gorevbuton()">6 Görev aç</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Gizli Göreverlerin</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <span id="myText1"></span>
+                <br>
+                <span id="myText2"></span>
+                <br>
+                <span id="myText3"></span>
+                <br>
+                <span id="myText4"></span>
+                <br>
+                <span id="myText5"></span>
+                <br>
+                <span id="myText6"></span>
+
+                <script> 
+                    var textArray = [
+                    "-Kaanın şapkasını taktırma","Kabe hangi yönde","Küp şeker yedirme","Birine sınıfı temizletme","Uluğ yu çan çıdama sinirlendirtme","Küçükkurt parmak kopması sihirbazlık","Derste biriyle beraber kütüphaneye gitmek","Birinin bartu çok inatçısın demesi","Birinin sana vurmasını sağlamak","Birinin Ağlıyor musun diye sormasını sağlamak","Birinin sana sabah kahve almasını sağla","Doğaya toz pembe bir şey giydir","Birinin Wenzelin ipadine resim çizmesini sağla","Birinin derste herkesin duyacağı şekilde yüksek sesle bağırmasını sağla","Birinin youtube dan tame impala açmasını sağla","Maya nın müzik olmayan bir derste trompet çalmasını sağlama","Birinin okula uyumak için yastık getirmesi sağla","Alman bir hocanın türkçe bir cümle söylemesini sağlama","Hergangi bir derste gönüllü olup sunum yapma","Biriyle hindistanın kıta olup olmadığıyla ilgili tartışma başlatma","Tuna yada ege nin okula kotla gelmesini sağlama","Bedende en az 6 kişiyi badminton oynamaya ikna etme","Birinin okula çantasız gelmesini sağlama","Birinin sınıfa (en az 5 kişiye) çay almasını sağlama","Birini vertretunge ikna etme","Birini derste şiir okumaya ikna etme ","Birinin free hug kartonu taşıması sağla","Sınıftan 5 kişiyi tombala oynamaya ikna etme"
+                    ];
+
+                    // var randomGorev1 = textArray[Math.floor(Math.random()*textArray.length)];
+                    // var randomGorev2 = textArray[Math.floor(Math.random()*textArray.length)];
+                    // var randomGorev3 = textArray[Math.floor(Math.random()*textArray.length)];
+                    // var randomGorev4 = textArray[Math.floor(Math.random()*textArray.length)];
+                    // var randomGorev5 = textArray[Math.floor(Math.random()*textArray.length)];
+                    
+                    // document.getElementById("myText1").innerHTML = randomGorev1;
+                    // document.getElementById("myText2").innerHTML = randomGorev2;
+                    // document.getElementById("myText3").innerHTML = randomGorev3;
+                    // document.getElementById("myText4").innerHTML = randomGorev4;
+                    // document.getElementById("myText5").innerHTML = randomGorev5;
+
+                    function gorevbuton(){
+                      var randomGorev1 = textArray[Math.floor(Math.random()*textArray.length)];
+                      var randomGorev2 = textArray[Math.floor(Math.random()*textArray.length)];
+                      var randomGorev3 = textArray[Math.floor(Math.random()*textArray.length)];
+                      var randomGorev4 = textArray[Math.floor(Math.random()*textArray.length)];
+                      var randomGorev5 = textArray[Math.floor(Math.random()*textArray.length)];
+                      var randomGorev6 = textArray[Math.floor(Math.random()*textArray.length)];
+                      
+                      document.getElementById("myText1").innerHTML = randomGorev1;
+                      document.getElementById("myText2").innerHTML = randomGorev2;
+                      document.getElementById("myText3").innerHTML = randomGorev3;
+                      document.getElementById("myText4").innerHTML = randomGorev4;
+                      document.getElementById("myText5").innerHTML = randomGorev5;
+                      document.getElementById("myText6").innerHTML = randomGorev6;
+                    }
+                    // document.getElementById('gorevbuton').onclick = function() {
+                    //   var randomGorev1 = textArray[Math.floor(Math.random()*textArray.length)];
+                    //   var randomGorev2 = textArray[Math.floor(Math.random()*textArray.length)];
+                    //   var randomGorev3 = textArray[Math.floor(Math.random()*textArray.length)];
+                    //   var randomGorev4 = textArray[Math.floor(Math.random()*textArray.length)];
+                    //   var randomGorev5 = textArray[Math.floor(Math.random()*textArray.length)];
+                    
+                    //   document.getElementById("myText1").innerHTML = randomGorev1;
+                    //   document.getElementById("myText2").innerHTML = randomGorev2;
+                    //   document.getElementById("myText3").innerHTML = randomGorev3;
+                    //   document.getElementById("myText4").innerHTML = randomGorev4;
+                    //   document.getElementById("myText5").innerHTML = randomGorev5;
+                    // }​;​
+                </script>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
